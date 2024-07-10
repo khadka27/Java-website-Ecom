@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+	<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+		id="WebApp_ID" version="4.0">
+		<display-name>kyubegadget</display-name>
+
+
+		<servlet>
+			<servlet-name>RegisterServlet</servlet-name>
+			<servlet-class>com.kyubegadget.controller.servlet.RegisterServlet
+			</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>RegisterServlet</servlet-name>
+			<url-pattern>/RegisterServlet</url-pattern>
+		</servlet-mapping>
+
+		<servlet>
+			<servlet-name>AddToCartServlet</servlet-name>
+			<servlet-class>AddToCartServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>AddToCartServlet</servlet-name>
+			<url-pattern>/AddToCartServlet</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>CheckoutServlet</servlet-name>
+			<servlet-class>CheckoutServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>CheckoutServlet</servlet-name>
+			<url-pattern>/CheckoutServlet</url-pattern>
+		</servlet-mapping>
+		
+		<servlet-mapping>
+			<servlet-name>EditProductServlet</servlet-name>
+			<url-pattern>/EditProductServlet</url-pattern>
+		</servlet-mapping>
+
+
+		<servlet>
+			<servlet-name>AdminEditUserServlet</servlet-name>
+			<servlet-class>com.kyubegadget.controller.servlet.AdminEditUserServlet
+			</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>AdminEditUserServlet</servlet-name>
+			<url-pattern>/AdminEditUserServlet</url-pattern>
+		</servlet-mapping>
+
+		<filter>
+			<filter-name>LoginFilter</filter-name>
+			<filter-class>com.kyubegadget.controller.Filter.LoginFilter</filter-class>
+		</filter>
+		<filter-mapping>
+			<filter-name>LoginFilter</filter-name>
+			<url-pattern>/LoginFilter</url-pattern>
+		</filter-mapping>
+
+
+
+
+
+	</web-app>
+
+	<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+		version="2.4" id="WebApp_ID">
+		<display-name>kyubegadget</display-name>
+		<welcome-file-list>
+			<welcome-file>index.html</welcome-file>
+			<welcome-file>index.htm</welcome-file>
+			<welcome-file>index.jsp</welcome-file>
+			<welcome-file>default.html</welcome-file>
+			<welcome-file>default.htm</welcome-file>
+			<welcome-file>default.jsp</welcome-file>
+		</welcome-file-list>
+	</web-app>
+
+</element>
+
